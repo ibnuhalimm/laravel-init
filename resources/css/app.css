@@ -1,0 +1,152 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+body {
+    @apply overflow-y-scroll !important;
+    @apply text-sm !important;
+}
+
+body.modal-open {
+    @apply h-screen !important;
+    @apply overflow-y-hidden !important;
+}
+
+@screen xl {
+    body.modal-open {
+        @apply pr-4 !important;
+    }
+}
+
+.modal-hide {
+    @apply opacity-0;
+    @apply pointer-events-none;
+}
+
+.left-sidebar--open {
+    transform: none !important;
+}
+
+.breadcrumb li a {
+    @apply text-gray-700 !important;
+    @apply hover:underline;
+}
+
+.dataTables_wrapper .dataTables_length select {
+    @apply mt-1 pr-10 text-sm;
+    @apply focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50;
+}
+
+.dataTables_wrapper .dataTables_filter input {
+    @apply mt-1 mr-1 text-sm;
+    @apply focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50;
+}
+
+table.dataTable thead th,
+table.dataTable thead td {
+    @apply border border-t-0 border-r-0 border-l-0 border-solid border-gray-400;
+    @apply py-4;
+}
+
+table.dataTable tbody th,
+table.dataTable tbody td {
+    @apply border border-t-0 border-r-0 border-l-0 border-solid border-gray-200;
+}
+
+table.dataTable.no-footer {
+    @apply border-b-0;
+}
+
+
+/* action button for table */
+.btn-action--red {
+    @apply h-7;
+    @apply inline-flex items-center justify-center p-2 mb-1 !important;
+    @apply bg-red-500 border border-transparent rounded-md text-xs text-white hover:text-white uppercase !important;
+    @apply hover:bg-red-600 focus:bg-red-600 outline-none focus:outline-none focus:border-red-600 !important;
+    @apply focus:ring ring-red-300 disabled:opacity-50 disabled:hover:bg-red-500 disabled:hover:cursor-not-allowed transition ease-in-out duration-150 !important;
+    @apply whitespace-nowrap
+}
+
+.btn-action--red-outline {
+    @apply h-7;
+    @apply inline-flex items-center justify-center px-2 py-1 mb-1 !important;
+    @apply bg-transparent border border-solid border-red-500 rounded-md text-xs text-red-500 hover:text-white focus:text-white uppercase !important;
+    @apply hover:bg-red-600 focus:bg-red-600 outline-none focus:outline-none focus:border-red-600 !important;
+    @apply focus:ring ring-red-300 disabled:opacity-50 disabled:hover:bg-transparent disabled:hover:cursor-not-allowed transition ease-in-out duration-150 !important;
+    @apply whitespace-nowrap
+}
+
+.btn-action--green {
+    @apply h-7;
+    @apply inline-flex items-center justify-center p-2 mb-1 !important;
+    @apply bg-green-600 border border-transparent rounded-md text-xs text-white hover:text-white uppercase !important;
+    @apply hover:bg-green-700 focus:bg-green-700 outline-none focus:outline-none focus:border-green-700 !important;
+    @apply focus:ring ring-green-400 disabled:opacity-50 disabled:hover:bg-green-600 disabled:hover:cursor-not-allowed transition ease-in-out duration-150 !important;
+    @apply whitespace-nowrap
+}
+
+.btn-action--green-outline {
+    @apply h-7;
+    @apply inline-flex items-center justify-center px-2 py-1 mb-1 !important;
+    @apply bg-transparent border border-solid border-green-500 rounded-md text-xs text-green-500 hover:text-white focus:text-white uppercase !important;
+    @apply hover:bg-green-600 focus:bg-green-600 outline-none focus:outline-none focus:border-green-600 !important;
+    @apply focus:ring ring-green-300 disabled:opacity-50 disabled:hover:bg-transparent disabled:hover:cursor-not-allowed transition ease-in-out duration-150 !important;
+    @apply whitespace-nowrap
+}
+
+.btn-action--blue {
+    @apply h-7;
+    @apply inline-flex items-center justify-center p-2 mb-1 !important;
+    @apply bg-blue-500 border border-transparent rounded-md text-xs text-white hover:text-white uppercase !important;
+    @apply hover:bg-blue-600 focus:bg-blue-600 outline-none focus:outline-none focus:border-blue-600 !important;
+    @apply focus:ring ring-blue-300 disabled:opacity-50 disabled:hover:bg-blue-500 disabled:hover:cursor-not-allowed transition ease-in-out duration-150 !important;
+    @apply whitespace-nowrap
+}
+
+.btn-action--blue-outline {
+    @apply h-7;
+    @apply inline-flex items-center justify-center px-2 py-1 mb-1 !important;
+    @apply bg-transparent border border-solid border-blue-500 rounded-md text-xs text-blue-500 hover:text-white focus:text-white uppercase !important;
+    @apply hover:bg-blue-600 focus:bg-blue-600 outline-none focus:outline-none focus:border-blue-600 !important;
+    @apply focus:ring ring-blue-300 disabled:opacity-50 disabled:hover:bg-transparent disabled:hover:cursor-not-allowed transition ease-in-out duration-150 !important;
+    @apply whitespace-nowrap
+}
+
+.btn-action--yellow {
+    @apply h-7;
+    @apply inline-flex items-center justify-center p-2 mb-1 !important;
+    @apply bg-yellow-500 border border-transparent rounded-md text-xs text-white hover:text-white uppercase !important;
+    @apply hover:bg-yellow-600 focus:bg-yellow-600 outline-none focus:outline-none focus:border-yellow-600 !important;
+    @apply focus:ring ring-yellow-300 disabled:opacity-50 disabled:bg-yellow-500 disabled:hover:cursor-not-allowed transition ease-in-out duration-150 !important;
+    @apply whitespace-nowrap
+}
+
+.btn-action--yellow-outline {
+    @apply h-7;
+    @apply inline-flex items-center justify-center px-2 py-1 mb-1 !important;
+    @apply bg-transparent border border-solid border-yellow-500 rounded-md text-xs text-yellow-500 hover:text-white focus:text-white uppercase !important;
+    @apply hover:bg-yellow-500 focus:bg-yellow-500 outline-none focus:outline-none focus:border-yellow-500 !important;
+    @apply focus:ring ring-yellow-300 disabled:opacity-50 disabled:hover:bg-transparent disabled:hover:cursor-not-allowed transition ease-in-out duration-150 !important;
+    @apply whitespace-nowrap
+}
+
+.btn-action--gray {
+    @apply h-7;
+    @apply inline-flex items-center justify-center p-2 mb-1 !important;
+    @apply bg-gray-400 border border-transparent rounded-md text-xs text-white hover:text-white uppercase !important;
+    @apply hover:bg-gray-500 focus:bg-gray-500 outline-none focus:outline-none focus:border-gray-500 !important;
+    @apply focus:ring ring-gray-200 disabled:opacity-50 disabled:hover:bg-gray-400 disabled:hover:cursor-not-allowed transition ease-in-out duration-150 !important;
+    @apply whitespace-nowrap
+}
+
+/**
+--- Sweet Alert ---
+*/
+.swal2-title {
+    @apply text-xl;
+}
+.swal2-html-container {
+    @apply overflow-y-hidden;
+    @apply text-sm;
+}
